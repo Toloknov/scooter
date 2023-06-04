@@ -1,0 +1,115 @@
+:root {
+  --black-color: #151515;
+  --light-color: #f1f1f1;
+  --bg: #222222;
+  --orange-color: #ff4c0d;
+  --gap: 30px;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  animation-name: accordion;
+  animation-duration: 3s;
+}
+
+.input-reset {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+}
+.input-reset::-webkit-search-decoration, .input-reset::-webkit-search-cancel-button, .input-reset::-webkit-search-results-button, .input-reset::-webkit-search-results-decoration {
+  display: none;
+}
+
+:root {
+  --black-color: #151515;
+  --light-color: #f1f1f1;
+  --bg: #222222;
+  --orange-color: #ff4c0d;
+  --gap: 30px;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  animation-name: accordion;
+  animation-duration: 3s;
+}
+
+.input-reset {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+}
+.input-reset::-webkit-search-decoration, .input-reset::-webkit-search-cancel-button, .input-reset::-webkit-search-results-button, .input-reset::-webkit-search-results-decoration {
+  display: none;
+}
+
+/* stylelint-disable */
+.footer_box {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media (max-width: 480px) {
+  .footer_box {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+.footer_item {
+  margin: 60px 0;
+}
+@media (max-width: 480px) {
+  .footer_item {
+    margin-bottom: 0;
+  }
+}
+.footer_item:last-child {
+  text-align: end;
+}
+@media (max-width: 480px) {
+  .footer_item:last-child {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+.footer_span {
+  display: flex;
+  white-space: nowrap;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  color: var(--light-color);
+}
+.footer_span:first-child {
+  margin-bottom: 20px;
+}
+@media (max-width: 480px) {
+  .footer_span {
+    text-align: center;
+  }
+}

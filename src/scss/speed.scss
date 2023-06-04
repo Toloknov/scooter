@@ -1,0 +1,87 @@
+@import "./variables.scss";
+@import "./layout.scss";
+.speed {
+  padding: 8.33% 0;
+  margin-bottom: 120px;
+  @include image-set("../images/speed", "jpg");
+  background-repeat: no-repeat;
+  background-position: 58%;
+  background-size: cover;
+  position: relative;
+  @include tablet {
+    margin-bottom: 90px;
+  }
+  @include mobile {
+    margin-bottom: 60px;
+  }
+  &-ellipse {
+    z-index: -10;
+    position: absolute;
+    top: -110px;
+    right: -110px;
+    width: 450px;
+    height: 450px;
+    background: #fc1f1f;
+    opacity: 0.3;
+    filter: blur(140px);
+    transform: rotate(-90deg);
+  }
+  &-container {
+    &_logo {
+      display: block;
+      margin-bottom: 150px;
+    }
+
+    &_logo-img {
+      max-width: 60px;
+      max-height: 39px;
+      fill: #f1f1f1;
+    }
+
+    &_title {
+      font-weight: 600;
+      max-width: 420px;
+      font-size: 45px;
+      line-height: 110%;
+      color: #f1f1f1;
+      margin: 0;
+      margin-bottom: 35px;
+      @include tablet {
+        font-size: 30px;
+        line-height: 110%;
+        margin-bottom: 10px;
+      }
+      @include mobile {
+        font-size: 25px;
+        line-height: 120%;
+      }
+    }
+
+    &_desc {
+      max-width: 360px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      color: #f1f1f1;
+      letter-spacing: -0.01em;
+      opacity: 0.8;
+      margin: 0;
+      @include tablet {
+      }
+    }
+  }
+  &-line-left {
+    width: 1440px;
+    height: 341px;
+    z-index: -10;
+    position: absolute;
+    top: -340px;
+  }
+  &-line-right {
+    width: 296px;
+    height: 157px;
+    position: absolute;
+    bottom: -156px;
+    left: 1610px;
+  }
+}

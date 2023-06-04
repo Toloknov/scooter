@@ -1,0 +1,221 @@
+@import "./variables.scss";
+@import "./layout.scss";
+
+.header {
+  padding-top: 40px;
+  position: relative;
+  // margin-bottom: 120px;
+  &_main-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -10;
+  }
+  &_ellipse-1 {
+    z-index: -10;
+    position: absolute;
+    top: -327px;
+    left: 43%;
+    height: 450px;
+    width: 450px;
+    border-radius: 50%;
+    background: #fc1f1f;
+    opacity: 0.3;
+    filter: blur(140px);
+    transform: rotate(-90deg);
+  }
+  &_ellipse-2 {
+    z-index: -10;
+    position: absolute;
+    top: -660px;
+    right: -400px;
+    height: 850px;
+    width: 850px;
+    border-radius: 50%;
+    background: #fc501f;
+    opacity: 0.5;
+    filter: blur(140px);
+    transform: rotate(-90deg);
+  }
+  &_ellipse-3 {
+    z-index: -10;
+    position: absolute;
+    top: -260px;
+    right: -9%;
+    height: 850px;
+    width: 850px;
+    border-radius: 50%;
+    background: #fc501f;
+    opacity: 0.2;
+    filter: blur(140px);
+    transform: rotate(-90deg);
+    @include tablet {
+      display: none;
+    }
+  }
+  &_top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 120px;
+    @include tablet {
+      margin-bottom: 60px;
+    }
+    @include mobile {
+      margin-bottom: 270px;
+    }
+  }
+  &_logo {
+    margin-right: 80px;
+  }
+  &_logo-img {
+    max-width: 60px;
+    max-height: 39px;
+    fill: var(--light-color);
+    @include tablet {
+      fill: var(--orange-color);
+    }
+  }
+
+  &_nav {
+    @include row-flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    @include tablet {
+      padding: 40px 15px 25px 15px;
+      min-width: 320px;
+      flex-direction: column;
+      justify-content: center;
+      position: absolute;
+      background-color: #f1f1f1;
+      color: #151515;
+      right: 0;
+      top: 40px;
+      transform: translateX(320px);
+      transition: transform 0.6s ease;
+    }
+    @include mobile {
+      flex-wrap: nowrap;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      transform: translateX(100%);
+    }
+  }
+
+  .header_nav-active {
+    transform: translateX(0);
+  }
+
+  &_lists {
+    @include row-flex;
+    @include tablet {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  &_main-img {
+    max-width: 794px;
+    max-height: 800px;
+  }
+  &_list {
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+    @include tablet {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+      padding: 15px;
+    }
+  }
+  &_link {
+    transition: text-decoration 1s ease;
+    @include hover {
+      text-decoration: underline;
+    }
+  }
+
+  &_title {
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 100%;
+    max-width: 1050px;
+    margin-bottom: 20px;
+    @include tablet {
+      max-width: 550px;
+      color: var(--orange-color);
+      font-size: 40px;
+      line-height: 120%;
+    }
+    @include mobile {
+      font-size: 30px;
+    }
+  }
+
+  &_desc {
+    margin-top: 0;
+    max-width: 550px;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 120%;
+    color: var(--orange-color);
+    margin-bottom: 60px;
+    @include tablet {
+      max-width: 320px;
+      color: var(--light-color);
+      font-size: 20px;
+      line-height: 120%;
+      margin-bottom: 40px;
+    }
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+}
+
+.burger-menu {
+  display: none;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  margin-left: auto;
+  cursor: pointer;
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  &_line {
+    position: absolute;
+    display: block;
+    border-radius: 10px;
+    width: 24px;
+    height: 3px;
+    background: #0d1c2e;
+    transition: transform 0.5s ease;
+
+    &:first-child {
+      margin-bottom: 14px;
+    }
+    &:last-child {
+      margin-top: 14px;
+    }
+  }
+}
+.burger-menu_line-active {
+  .burger-menu_line:nth-child(2) {
+    display: none;
+  }
+  .burger-menu_line:nth-child(1) {
+    margin-bottom: 0;
+    transform: rotate(45deg);
+  }
+  .burger-menu_line:nth-child(3) {
+    margin-top: 0;
+    transform: rotate(-45deg);
+  }
+}

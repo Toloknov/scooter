@@ -1,0 +1,132 @@
+@import "./layout.scss";
+@import "./variables.scss";
+.design {
+  z-index: -10;
+  margin-bottom: 120px;
+  position: relative;
+  @include tablet {
+    margin-bottom: 90px;
+  }
+  @include mobile {
+    margin-bottom: 60px;
+  }
+  &_ellipse-1 {
+    position: absolute;
+    top: -120px;
+    right: -200px;
+    width: 850px;
+    height: 850px;
+    background: linear-gradient(
+      120.02deg,
+      #fc501f 12.77%,
+      rgba(252, 80, 31, 0) 59.51%
+    );
+    opacity: 0.5;
+    filter: blur(140px);
+    transform: matrix(0, 1, 1, 0, 0, 0);
+  }
+  &_ellipse-2 {
+    z-index: -10;
+    position: absolute;
+    height: 581px;
+    width: 579px;
+    bottom: -200px;
+    left: -30px;
+    background: linear-gradient(
+      121.95deg,
+      #fc1f1f 13.18%,
+      rgba(252, 203, 31, 0.31) 72.93%
+    );
+    opacity: 0.3;
+    filter: blur(140px);
+    transform: rotate(-90deg);
+  }
+  &_title {
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 110%;
+    color: var(--orange-color);
+    max-width: 760px;
+    @include tablet {
+      font-size: 30px;
+      line-height: 110%;
+      color: var(--light-color);
+    }
+  }
+
+  &_items {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    @include tablet {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &_item {
+    @include size-block(6);
+    flex: 0 1 560px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    @include hover {
+      transform: scale(1.05);
+    }
+  }
+  &_item-content {
+    padding: 10.7%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    @include mobile {
+      padding: 20px 0 0 0;
+      position: static;
+    }
+  }
+  &_item-img {
+    border-radius: 25px;
+  }
+
+  &_item-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 120%;
+    color: #f1f1f1;
+    @include tablet {
+      font-size: 20px;
+      line-height: 120%;
+    }
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  &_item-text {
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #f1f1f1;
+  
+    @include tablet {
+      font-size: 14px;
+      line-height: 160%;
+    }
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+  &-line {
+    position: absolute;
+    bottom: -120px;
+    left: 0;
+    z-index: -10;
+    width: 326px;
+    height: 316px;
+    @include small-tablet {
+      display: none;
+    }
+  }
+}

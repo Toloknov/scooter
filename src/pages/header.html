@@ -1,0 +1,64 @@
+<header class="header" id="header">
+  <div class="header_ellipse-1"></div>
+  <div class="header_ellipse-2"></div>
+  <div class="header_ellipse-3"></div>
+  <div class="wrapper">
+    <div class="header_top">
+      <a href="#header" class="header_logo">
+        <svg class="header_logo-img">
+          <use xlink:href="./images/sprite.svg#--logo"></use>
+        </svg>
+      </a>
+      <nav class="header_nav">
+        <ul class="header_lists">
+          <li class="header_list">
+            <a href="#prod" class="header_link">О продукте</a>
+          </li>
+          <li class="header_list">
+            <a href="#design" class="header_link">Внешний вид</a>
+          </li>
+          <li class="header_list">
+            <a href="#security" class="header_link">Безопасность</a>
+          </li>
+          <li class="header_list">
+            <a href="#reviews" class="header_link">Отзывы</a>
+          </li>
+          <li class="header_list"><a href="#scooter" class="header_link">FAQ</a></li>
+        </ul>
+        <button class="header_btn btn" id="buy">Купить</button>
+      </nav>
+      <div class="burger-menu" data-burger-menu>
+        <span class="burger-menu_line"></span><span class="burger-menu_line"></span><span
+          class="burger-menu_line"></span>
+      </div>
+    </div>
+    <h1 class="header_title">Стильный электросамокат с мощным аккумулятором</h1>
+    <p class="header_desc">
+      Улучшенная производительность для дальних путешествий. Работает так же
+      просто, как и выглядит.
+    </p>
+    <picture id="head-pic" >
+      <source media="(max-width: 480px)" width="233" height="352" type="image/avif"
+        srcset="./images/white-scooter-min.avif">
+      <source media="(max-width: 960px)" width="347" height="592" type="image/avif"
+        srcset="./images/white-scooter-middle.avif">
+      <source type="image/avif" width="794" height="800" srcset="./images/white-scooter-big.avif">
+      <source media="(max-width: 480px)" width="233" height="352" type="image/webp"
+        srcset="./images/white-scooter-min.webp">
+      <source media="(max-width: 960px)" width="347" height="592" type="image/webp"
+        srcset="./images/white-scooter-middle.webp">
+      <source type="image/webp" width="794" height="800" srcset="./images/white-scooter-big.webp">
+      <source media="(max-width: 480px)" width="233" height="352" type="image/png"
+        srcset="./images/white-scooter-min.png">
+      <source media="(max-width: 960px)" width="347" height="592" type="image/png"
+        srcset="./images/white-scooter-middle.png">
+      <img loading="lazy" width="794" height="800" src="./images/white-scooter-big.png" class="header_main-img"
+        alt="scooter">
+    </picture>
+
+    <div class="box">
+      <button class="box_btn box_btn_active" data-toggle="white">Белый</button><button class="box_btn"
+        data-toggle="dark">Черный</button>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,77 @@
+    scss
+
+
+    
+    пример подгона картинки
+.cards {
+  $bigW: 406.67; // ширина центрального блока
+  $bigH: 723.8; // высота всей картинки
+  $gap: 10px;
+  $ratio: calc($bigW / $bigH);
+  $sW: calc(
+    (100% - $gap * (2 + $ratio)) / (2 * $ratio + 2)
+  ); // ширина маленького блока
+  display: grid;
+  gap: $gap;
+  grid-template-columns: $sW 1fr $sW;
+  grid-template-areas: "a full c" "d full e";
+
+  .card:nth-child(1) {
+    grid-area: a;
+  }
+
+  .card:nth-child(2) {
+    grid-area: full;
+  }
+
+  .card:nth-child(3) {
+    grid-area: c;
+  }
+
+  .card:nth-child(4) {
+    grid-area: d;
+  }
+
+  .card:nth-child(5) {
+    grid-area: e;
+  }
+}
+
+
+js 
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelector(".cards");
+  const bigImages = document.querySelector(".big-images img");
+  function setRatio() {
+    cards.style.setProperty("--bigW", bigImages.naturalWidth);
+    cards.style.setProperty("--bigH", bigImages.naturalHeight);
+  }
+  if (bigImages.naturalWidth > 0) {
+    setRatio();
+  } else {
+    bigImages.addEventListener("load", () => {
+      setRatio();
+    });
+  }
+}); // это пример как подгонять картинку в зависимости от ее размера
+
+
+
+                                      SVG
+   Если у нас не влазит вся svg в блок то надо поставить viewBox приям в svg 
+     
+              sprite
+    <svg style="display:none" xmlns="http://www.w3.org/2000/svg" xmlns:link="http;//www.w3.org/1999/xlink">
+      <symbol id="xxxx" viewBox=""-c svg котрорую нам надо вставить >
+        передаем все внутрености svg которая нам нада
+      </symbol>
+      <symbol id="xxxx" viewBox=""-c svg котрорую нам надо вставить >
+        передаем все внутрености svg которая нам нада
+      </symbol>
+    </svg> 
+        Чтобы использовать sprite этот -
+    <svg style="width:30px; height:30px">
+       <use xlink:href="../images/sprite.svg#--logo"></use>
+    </svg>             удалить fill в sprite

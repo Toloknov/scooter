@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="preload" href="./fonts/Gilroy-Bold.woff2" as="font" type="font/woff2" crossorigin> -->
+
+  <script src="./js/main.min.js" defer></script>
+  <title>Scooter</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<!-- picImg picDS-->
+
+<body class="body">
+  <header class="header" id="header">
+  <div class="header_ellipse-1"></div>
+  <div class="header_ellipse-2"></div>
+  <div class="header_ellipse-3"></div>
+  <div class="wrapper">
+    <div class="header_top">
+      <a href="#header" class="header_logo">
+        <svg class="header_logo-img">
+          <use xlink:href="./images/sprite.svg#--logo"></use>
+        </svg>
+      </a>
+      <nav class="header_nav">
+        <ul class="header_lists">
+          <li class="header_list">
+            <a href="#prod" class="header_link">О продукте</a>
+          </li>
+          <li class="header_list">
+            <a href="#design" class="header_link">Внешний вид</a>
+          </li>
+          <li class="header_list">
+            <a href="#security" class="header_link">Безопасность</a>
+          </li>
+          <li class="header_list">
+            <a href="#reviews" class="header_link">Отзывы</a>
+          </li>
+          <li class="header_list"><a href="#scooter" class="header_link">FAQ</a></li>
+        </ul>
+        <button class="header_btn btn" id="buy">Купить</button>
+      </nav>
+      <div class="burger-menu" data-burger-menu>
+        <span class="burger-menu_line"></span><span class="burger-menu_line"></span><span
+          class="burger-menu_line"></span>
+      </div>
+    </div>
+    <h1 class="header_title">Стильный электросамокат с мощным аккумулятором</h1>
+    <p class="header_desc">
+      Улучшенная производительность для дальних путешествий. Работает так же
+      просто, как и выглядит.
+    </p>
+    <picture id="head-pic" >
+      <source media="(max-width: 480px)" width="233" height="352" type="image/avif"
+        srcset="./images/white-scooter-min.avif">
+      <source media="(max-width: 960px)" width="347" height="592" type="image/avif"
+        srcset="./images/white-scooter-middle.avif">
+      <source type="image/avif" width="794" height="800" srcset="./images/white-scooter-big.avif">
+      <source media="(max-width: 480px)" width="233" height="352" type="image/webp"
+        srcset="./images/white-scooter-min.webp">
+      <source media="(max-width: 960px)" width="347" height="592" type="image/webp"
+        srcset="./images/white-scooter-middle.webp">
+      <source type="image/webp" width="794" height="800" srcset="./images/white-scooter-big.webp">
+      <source media="(max-width: 480px)" width="233" height="352" type="image/png"
+        srcset="./images/white-scooter-min.png">
+      <source media="(max-width: 960px)" width="347" height="592" type="image/png"
+        srcset="./images/white-scooter-middle.png">
+      <img loading="lazy" width="794" height="800" src="./images/white-scooter-big.png" class="header_main-img"
+        alt="scooter">
+    </picture>
+
+    <div class="box">
+      <button class="box_btn box_btn_active" data-toggle="white">Белый</button><button class="box_btn"
+        data-toggle="dark">Черный</button>
+    </div>
+  </div>
+</header>
+  <main class="main">
+    <section class="pawer" id="prod">
+  <div class="wrapper">
+    <div class="pawer_ellipse"></div>
+    <h2 class="pawer_title" >
+      Мощная батарея и экономичный расход заряда позволяют преодолевать
+      расстояния до 45 км
+    </h2>
+
+    <div class="pawer_container" data-aos="fade-right">
+      <div
+        class="pawer_container-item pawer_container-item-active"
+        data-elem="1"
+      >
+        <h4 class="pawer_container-title">Три режима скорости</h4>
+        <hr class="pawer_container-line" >
+        <div class="pawer_container-desc">
+          Три режима езды позволяют почуствовать себя комфортно в любой
+          ситуации. Режим «S» увеличитвает скорость, если опаздываете на
+          работу.Во время прогулки по парку активируйте режим «D».Включите режим
+          «Пешеход», когда двигаетесь по оживлённой улице.
+        </div>
+        <div class="pawer_container-img" >
+          <picture>
+            <source type="image/avif" srcset="./images/pawer-1.avif" >
+            <source type="image/webp" srcset="./images/pawer-1.webp" >
+            <img src="./images/pawer-1.jpg" alt="Image"
+          ></picture>
+        </div>
+      </div>
+      <div class="pawer_container-item" data-elem="2">
+        <h4 class="pawer_container-title">Система восстановления энергии</h4>
+        <hr class="pawer_container-line" >
+        <div class="pawer_container-desc">
+          Во время торможения и движения по инерции система преобразовывает
+          кинетическую энергию в электрическую, позволяя увеличить общий запас
+          хода самоката.
+        </div>
+        <div class="pawer_container-img">
+          <picture>
+            <source type="image/avif" srcset="./images/pawer-2.avif" >
+            <source type="image/webp" srcset="./images/pawer-2.webp" >
+            <img src="./images/pawer-2.jpg" alt="Image"
+          ></picture>
+        </div>
+      </div>
+      <div class="pawer_container-item" data-elem="3">
+        <h4 class="pawer_container-title">Мощная батарея</h4>
+        <hr class="pawer_container-line" >
+        <div class="pawer_container-desc">
+          Самокат оснащен аккумулятором емкостью 12 800 мАч. Это позволяет
+          преодолевать расстояния до 45 км без подзарядки.
+        </div>
+        <div class="pawer_container-img">
+          <picture>
+            <source type="image/avif" srcset="./images/pawer-3.avif" >
+            <source type="image/webp" srcset="./images/pawer-3.webp" >
+            <img src="./images/pawer-3.jpg" alt="Image"
+          ></picture>
+        </div>
+      </div>
+    </div>
+    <div class="pawer_images" >
+      <div class="pawer_images-first">
+        <picture id="pawer_pic" >
+          <source type="image/avif" srcset="./images/pawer-1.avif" >
+          <source type="image/webp" srcset="./images/pawer-1.webp" >
+          <img data-aos="flip-left" src="./images/pawer-1.jpg" alt="Image" class="pawer_images-main"
+        ></picture>
+      </div>
+      <div class="pawer_images-second">
+        <picture
+          ><source type="image/avif" srcset="./images/pawer-sub.avif" >
+          <source type="image/webp" srcset="./images/pawer-sub.webp" >
+          <img src="./images/pawer-sub.jpg" data-aos="flip-right" alt="Image"
+        ></picture>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+      <section class="speed" >
+  <div class="speed-ellipse"></div>
+  <div class="speed-container" data-aos="fade-right">
+    <div class="wrapper">
+      <div class="speed-container_content">
+        <a href="#header" class="speed-container_logo">
+          <svg class="speed-container_logo-img">
+            <use xlink:href="./images/sprite.svg#--logo"></use>
+          </svg>
+        </a>
+        <div class="speed-container_box">
+          <h2 class="speed-container_title">Высокая скорость передвижения</h2>
+          <p class="speed-container_desc">
+            Двигатель мощностью до 600 Вт позволяет развивать скорость до 25
+            км/ч.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <svg class="speed-line-left" viewBox="0 0 1440 341">
+    <use xlink:href="./images/sprite.svg#--speed-line-left"></use>
+  </svg>
+  <div class="speed-line-right">
+    <svg  viewBox="0 0 296 157">
+      <use xlink:href="./images/sprite.svg#--speed-line-right"></use>
+    </svg>
+  </div>
+</section>
+
+    <section class="design" id="design">
+  <div class="design_ellipse-1"></div>
+  <div class="design_ellipse-2"></div>
+  <div class="wrapper">
+    <h2 class="design_title" data-aos="fade-right">
+      Лаконичный современный дизайн, в котором нет ничего лишнего
+    </h2>
+    <div class="design_items">
+      <div class="design_item">
+        <picture>
+          <source type="image/avif" srcset="./images/design-1.avif">
+          <source type="image/webp" srcset="./images/design-1.webp">
+          <img data-aos="zoom-in" width="560" height="550" src="./images/design-1.jpg" alt="Image" class="design_item-img">
+        </picture>
+        <div class="design_item-content">
+          <h4 class="design_item-title">Минималистичный дизайн</h4>
+          <p class="design_item-text">
+            Рама, компоненты и аксессуары скутера выдержаны в едином стиле, где
+            удобство пользователя выходит на первое место. Одного прикосновения
+            достаточно, чтобы запустить самокат.
+          </p>
+        </div>
+      </div>
+      <div class="design_item">
+        <picture>
+          <source type="image/avif" srcset="./images/design-2.avif">
+          <source type="image/webp" srcset="./images/design-2.webp">
+          <img data-aos="zoom-in" width="560" height="550" src="./images/design-2.jpg" alt="Image" class="design_item-img">
+        </picture>
+        <div class="design_item-content">
+          <h4 class="design_item-title">Удобная панель управления</h4>
+          <p class="design_item-text">
+            Удобно расположенные элементы управления. Отображение8 типов данных
+            в реальном времени: скорость, режим, заряд аккумулятора, состояние
+            блокировки и другая информация.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="design-line">
+    <svg viewBox="0 0 326 316">
+      <use xlink:href="./images/sprite.svg#--design"></use>
+    </svg>
+  </div>
+</section> <section class="security" id="security">
+    <div class="wrapper">
+        <div class="security_ellipse"></div>
+        <h2 class="security_title" data-aos="fade-down-right">
+            Заботится о вашей безопасности
+        </h2>
+
+        <div class="security_container">
+            <div class="security_container-item security_container-item-active" data-elem="1">
+                <h4 class="security_container-title">Яркие ходовые огни</h4>
+                <hr class="security_container-line">
+                <div class="security_container-desc">
+                    Продуманный угол рассеивания света позволяет сохранять хорошую видимость, не ослепляя других
+                    участников движения.
+                </div>
+                <div class="security_container-img">
+                    <picture>
+                        <source type="image/avif" srcset="./images/security-1.avif">
+                        <source type="image/webp" srcset="./images/security-1.webp">
+                        <img src="./images/security-1.jpg" alt="Image">
+                    </picture>
+                </div>
+            </div>
+            <div class="security_container-item" data-elem="2">
+                <h4 class="security_container-title">Двойная тормозная система</h4>
+                <hr class="security_container-line">
+                <div class="security_container-desc">
+                    При нажатии наручку тормоза системы переднего и заднего колеса активируются последовательно,
+                    сокращая тормозной путь и обеспечивая безопасную и плавную остановку.
+                </div>
+                <div class="security_container-img">
+                    <picture>
+                        <source type="image/avif" srcset="./images/security-2.avif">
+                        <source type="image/webp" srcset="./images/security-2.webp">
+                        <img src="./images/security-2.jpg" alt="Image">
+                    </picture>
+                </div>
+            </div>
+            <div class="security_container-item" data-elem="3">
+                <h4 class="security_container-title">Яркая задняя фара</h4>
+                <hr class="security_container-line">
+                <div class="security_container-desc">
+                    При включении ходовых огней задняя фара включается автоматически. При нажатии на ручку тормоза она
+                    начинает мигать, предупреждая других участников движения.
+
+                </div>
+                <div class="security_container-img">
+                    <picture>
+                        <source type="image/avif" srcset="./images/security-3.avif">
+                        <source type="image/webp" srcset="./images/security-3.webp">
+                        <img src="./images/security-3.jpg" alt="Image">
+                    </picture>
+                </div>
+            </div>
+            <div class="security_container-item " data-elem="4">
+                <h4 class="security_container-title">Отражатели спереди, сбоку и сзади</h4>
+                <hr class="security_container-line">
+                <div class="security_container-desc">
+                    Улучшенные отражатели, размещенные с четырех сторон, делают вашу поездку в темное время суток
+                    безопаснее.
+                </div>
+                <div class="security_container-img">
+                    <picture>
+                        <source type="image/avif" srcset="./images/security-4.avif">
+                        <source type="image/webp" srcset="./images/security-4.webp">
+                        <img src="./images/security-4.jpg" alt="Image">
+                    </picture>
+                </div>
+            </div>
+        </div>
+        <div class="security_images">
+            <div class="security_images-first" data-aos="fade-up-right">
+                <picture id="security_pic">
+                    <source type="image/avif" srcset="./images/security-1.avif">
+                    <source type="image/webp" srcset="./images/security-1.webp">
+                    <img src="./images/security-1.jpg" alt="Image" class="security_images-main">
+                </picture>
+            </div>
+            <div class="security_images-second">
+                <picture>
+                    <source type="image/avif" srcset="./images/security-sub.avif">
+                    <source type="image/webp" srcset="./images/security-sub.webp">
+                    <img src="./images/security-sub.jpg" alt="Image">
+                </picture>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="mobile">
+    <div class="mobile-ellipse-1"></div>
+    <div class="mobile-ellipse-2"></div>
+    <div class="wrapper">
+        <div class="mobile_items">
+            <div class="mobile_item">
+                <h2 class="mobile_item-title" data-aos="fade-down-right">Мобильное приложение Mi Home</h2>
+                <p class="mobile_item-text">Подключите самокат к мобильному приложению Mi Home и используйте его для
+                    блокировки и разблокировки самоката, а так же просмотра основных данных: пробег, скорость, уровень
+                    заряда аккумулятора.</p>
+                <div class="mobile_item-vectors">
+                    <a href="#" class="mobile_item-vector">
+                        <svg width="120" height="40">
+                            <use xlink:href="./images/sprite.svg#--white-apple"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="mobile_item-vector">
+                        <svg width="120" height="40">
+                            <use xlink:href="./images/sprite.svg#--white-android"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="mobile_item">
+                <picture>
+                    <source type="image/avif" srcset="./images/mobile-dark.avif">
+                    <source type="image/webp" srcset="./images/mobile-dark.webp">
+                    <img src="./images/mobile-dark.png" alt="Image" class="mobile_item-img">
+                </picture>
+            </div>
+        </div>
+    </div>
+
+    <svg viewBox="0 0 600 430" class="mobile-line">
+        <use xlink:href="./images/sprite.svg#--mobile-line"></use>
+    </svg>
+
+</section>
+    <section class="brand">
+    <div class="wrapper">
+        <a href="#header" class="brand_logo">
+            <svg class="brand_logo-img" viewBox="0 0 60 39" width="60" height="39" >
+                <use xlink:href="./images/sprite.svg#--logo"></use>
+            </svg>
+        </a>
+        <h2 class="brand_title">О бренде Xiaomi</h2>
+        <p class="brand_text">Компания Xiaomi была основана предпринимателем Лей Цзюнем в 2010 году под девизом -
+            «Инновации для всех».
+            Мы верим, что высококачественные продукты и передовые технологии должны быть доступны каждому.
+        </p>
+    </div>
+</section><section class="reviews" id="reviews">
+    <div class="reviews-ellipse"></div>
+    <div class="reviews-wrapper swiper">
+        <h2 class="reviews_title">Отзывы о Mi Scooter Pro 2</h2>
+        <div class="reviews_container swiper-wrapper">
+            <!-- Reviews items -->
+            <div class="reviews_item swiper-slide">
+                <div class="reviews_item-wrap">
+                    <h3 class="reviews_item-title">Михаил Сафонов
+                    </h3>
+                    <hr class="reviews_item-line">
+                    <p class="reviews_item-text">Выбирал между двумя моделями: этим Mi Scooter Pro 2 и Ninebot Max 30P,
+                        в
+                        плюсах Макса - десятидюймовая резина и дальность пробега на одном заряде, скорость зарядки. В
+                        плюсах
+                        Xiaomi - Удобства переноски (вес аппарата, развесовка).<br><br>
+                        В итоге купил Xiaomi и поставил 10 дюймовые шины - получил комфорт при небольшом весе самоката.
+                    </p>
+                </div>
+            </div>
+            <div class="reviews_item swiper-slide">
+                <div class="reviews_item-wrap">
+                    <h3 class="reviews_item-title">Имя скрыто
+                    </h3>
+                    <hr class="reviews_item-line">
+                    <p class="reviews_item-text">Выбирал между двумя моделями: этим Mi Scooter Pro 2 и Ninebot Max 30P,
+                        в
+                        плюсах Макса - десятидюймовая резина и дальность пробега на одном заряде, скорость зарядки. В
+                        плюсах
+                        Xiaomi - Удобства переноски (вес аппарата, развесовка).<br><br>
+                        В итоге купил Xiaomi и поставил 10 дюймовые шины - получил комфорт при небольшом весе самоката.
+                    </p>
+                </div>
+            </div><div class="reviews_item swiper-slide">
+                <div class="reviews_item-wrap">
+                    <h3 class="reviews_item-title">Алексей З.
+                    </h3>
+                    <hr class="reviews_item-line">
+                    <p class="reviews_item-text">Выбирал между двумя моделями: этим Mi Scooter Pro 2 и Ninebot Max 30P,
+                        в
+                        плюсах Макса - десятидюймовая резина и дальность пробега на одном заряде, скорость зарядки. В
+                        плюсах
+                        Xiaomi - Удобства переноски (вес аппарата, развесовка).<br><br>
+                        В итоге купил Xiaomi и поставил 10 дюймовые шины - получил комфорт при небольшом весе самоката.
+                    </p>
+                </div>
+            </div><div class="reviews_item swiper-slide">
+                <div class="reviews_item-wrap">
+                    <h3 class="reviews_item-title">Сергей Сафонов
+                    </h3>
+                    <hr class="reviews_item-line">
+                    <p class="reviews_item-text">Выбирал между двумя моделями: этим Mi Scooter Pro 2 и Ninebot Max 30P,
+                        в
+                        плюсах Макса - десятидюймовая резина и дальность пробега на одном заряде, скорость зарядки. В
+                        плюсах
+                        
+                    </p>
+                </div>
+            </div><div class="reviews_item swiper-slide">
+                <div class="reviews_item-wrap">
+                    <h3 class="reviews_item-title">Леша Сафонов
+                    </h3>
+                    <hr class="reviews_item-line">
+                    <p class="reviews_item-text">Выбирал между двумя моделями: этим Mi Scooter Pro 2 и Ninebot Max 30P,
+                        в
+                        плюсах Макса - десятидюймовая резина и дальность пробега на одном заряде, скорость зарядки. В
+                        плюсах
+                        Xiaomi - Удобства переноски (вес аппарата, развесовка).<br><br>
+                        В итоге купил Xiaomi и поставил 10 дюймовые шины - получил комфорт при небольшом весе самоката.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="reviews_bottom wrapper">
+            <button class="reviews_btn btn">Оставить отзыв</button>
+            <div class="reviews_toggle">
+                <button class="reviews_toggle-prev">
+                    <svg class="reviews_toggle-icon" viewBox="0 0 7 14">
+                        <use xlink:href="./images/sprite.svg#--arrow"></use>
+                    </svg>
+                </button>
+                <button class="reviews_toggle-next">
+                    <svg class="reviews_toggle-icon" viewBox="0 0 7 14">
+                        <use xlink:href="./images/sprite.svg#--arrow"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section><section class="question">
+    <div class="question-ellipse"></div>
+    <div class="wrapper">
+        <div class="question-box">
+            <div class="question-item">
+                <h2 class="question-item_title">Часто задаваемые вопросы</h2>
+                <p class="question-item_desc">Все ваши часто задаваемые вопросыо электросамокате Mi Scooter Pro 2.
+                    <br><br>
+                    Если у вас есть собственный вопрос - задайте его через форму обратной связи.</p>
+                <button class="question-item_btn btn">Задать вопрос</button>
+            </div>
+            <div class="question-item">
+                <div class="question-item_wrap">
+                    <h2 class="question-item_wrap-title">На него нужны права категории M?</h2>
+                    <hr class="question-item_wrap-line">
+                    <p class="question-item_wrap-desc">Продуманный угол рассеивания света позволяет сохранять хорошую
+                        видимость, не ослепляя других участников движения.</p>
+                </div>
+                <div class="question-item_wrap">
+                    <h2 class="question-item_wrap-title">У меня вес 135 кг, выдержит ли этот самокат?</h2>
+                    <hr class="question-item_wrap-line">
+                    <p class="question-item_wrap-desc">Самокат определенно выдержит и будет ехать, но не с максимальной
+                        скоростью.</p>
+                </div>
+                <div class="question-item_wrap">
+                    <h2 class="question-item_wrap-title">Есть ли влагозащита?</h2>
+                    <hr class="question-item_wrap-line">
+                    <p class="question-item_wrap-desc">Электросамокат имеет степень защиты IP54. Он защищен от попадания пыли
+                        и брызг, падающих в любом направлении. Погружение в воду может привести к поломке. </p>
+                </div>
+                <div class="question-item_wrap">
+                    <h2 class="question-item_wrap-title">Это версия для Китая или Европы?</h2>
+                    <hr class="question-item_wrap-line">
+                    <p class="question-item_wrap-desc">Это Европейская версия, со всеми обновлениями и евро-вилкой.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><section class="scooter" id="scooter">
+    <div class="scooter-ellipse"></div>
+    <svg class="scooter-svg" viewBox="0 0 1440 719">
+        <use xlink:href="./images/sprite.svg#--scooter-pro"></use>
+      </svg>
+    <div class="scooter-wrapper" data-aos="fade-down-right">
+        <div class="scooter_box">
+            <div class="scooter_item">
+                <h2 class="scooter_item-title">Mi Electric Scooter Pro 2
+                    <span class="scooter_item-price">54 990  &#x20b4;</span>
+                </h2>
+                <div class="box">
+                    <button class="box_btn box_btn_active" data-toggle="white">Белый</button>
+                    <button class="box_btn" data-toggle="dark">Черный</button>
+                </div>
+
+            </div>
+            <div class="scooter_item">
+                <ul class="scooter_item-lists">
+                    <li class="scooter_item-list scooter_item-lists-title">Комплект поставки
+                    </li>
+                    <li class="scooter_item-list">Адаптер питанияx
+                    </li>
+                    <li class="scooter_item-list">Шестигранный ключ</li>
+                    <li class="scooter_item-list"> Удлинитель для насоса
+                    </li>
+                    <li class="scooter_item-list"> Винты x 5 шт.
+                    </li>
+                    <li class="scooter_item-list"> Запасная шина
+                    </li>
+                    <li class="scooter_item-list"> Руководство пользователя
+                    </li>
+                    <li class="scooter_item-list">Буклет с информацией</li>
+                </ul>
+                <picture data-scooter="pro">
+                    <source type="image/avif" srcset="./images/white-scooter-pro.png">
+                    <source type="image/webp" srcset="./images/white-scooter-pro.png"><img
+                        src="./images/white-scooter-pro.png" alt="Image" class="scooter_images">
+                </picture>
+            </div>
+            <div class="scooter_item">
+                <button class="scooter_item-btn btn" id="buy">Купить</button>
+            </div>
+        </div>
+    </div>
+</section><section class="modal hidden" id="modal">
+    <div class="modal_box">
+        <form action="" class="modal_box-form">
+            <button type="button" class="modal_cross" id="cross"></button>
+            <label for="email" class="modal_box-label">Ел. почта</label>
+            <input type="email" class="modal_box-input" name="email" id="email">
+
+            <label for="password" class="modal_box-label">Пароль</label>
+            <input type="password" class="modal_box-input" name="password" id="password">
+            <button type="submit" class="modal_box-btn btn">Отправить</button>
+        </form>
+    </div>
+</section>
+  </main>
+  <footer class="footer">
+    <div class="wrapper">
+        <div class="footer_box">
+            <div class="footer_item">
+                <span class="footer_span">© 2010 - 2021 Xiaomi.</span>
+                <span class="footer_span"> Все права защищены.</span>
+            </div>
+            <div class="footer_item">
+                <span class="footer_span"><a href="tel:+380935212041">+38 (093) 775 66 15</a> </span>
+                <span class="footer_span">Часы работы с 9:00 до 20:00 Киев, Пн. – Пт.</span>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+@import "./variables.scss";
+@import "./layout.scss";
+.brand {
+  padding: 8.75% 0;
+  margin-bottom: 120px;
+  @include image-set("../images/brand", "jpg");
+  background-repeat: no-repeat;
+  background-position: 58%;
+  background-size: cover;
+  position: relative;
+  @include tablet {
+    @include image-set("../images/brand-middle", "jpg");
+    background-repeat: no-repeat;
+    background-position: 80%;
+    background-size: cover;
+    margin-bottom: 80px;
+  }
+  @include mobile {
+    @include image-set("../images/brand-min", "jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    margin-bottom: 60px;
+  }
+  &_logo {
+    display: block;
+    margin-bottom: 150px;
+  }
+
+  &_logo-img {
+    fill: #ff4c0d;
+    @include mobile {
+        width: 46px;
+      fill: #f1f1f1;
+    }
+  }
+
+  &_title {
+    margin: 0 0 40px 0;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 110%;
+    color: #ff4c0d;
+    @include small-tablet {
+      font-size: 30px;
+    }
+    @include mobile {
+      color: #f1f1f1;
+      font-size: 25px;
+    }
+  }
+
+  &_text {
+    margin: 0;
+    max-width: 480px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    color: var(--black-color);
+    @include mobile {
+      color: #f1f1f1;
+    }
+  }
+}

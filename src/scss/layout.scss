@@ -1,0 +1,61 @@
+@import "./variables.scss";
+@mixin hover {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+@mixin row-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+// @include row-flex;
+@mixin size-block($cols, $gap: 0px) {
+  width: calc(100% / 12 * $cols - $gap);
+}
+// @include size-block(3);
+
+@mixin big-desktop {
+  @media (max-width: (1440px)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: (960px)) {
+    @content;
+  }
+}
+
+@mixin small-tablet {
+  @media (max-width: (768px)) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: (480px)) {
+    @content;
+  }
+}
+
+/* stylelint-disable */
+@mixin font-face($font-family, $url, $weight, $style) {
+  @font-face {
+    font-family: "#{$font-family}";
+    src: url($url) format("woff2");
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: $style;
+  }
+}
+// @include image-set("../images/1",jpg)
+@mixin image-set($pathToImage, $format) {
+  background-image: url("#{$pathToImage}." + $format);
+  background-image: image-set(
+    "#{$pathToImage}.avif" type("image/avif"),
+    "#{$pathToImage}.webp" type("image/webp"),
+    "#{$pathToImage}." + $format type("image/" + $format)
+  );
+}

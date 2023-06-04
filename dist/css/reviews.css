@@ -1,0 +1,206 @@
+:root {
+  --black-color: #151515;
+  --light-color: #f1f1f1;
+  --bg: #222222;
+  --orange-color: #ff4c0d;
+  --gap: 30px;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  animation-name: accordion;
+  animation-duration: 3s;
+}
+
+.input-reset {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+}
+.input-reset::-webkit-search-decoration, .input-reset::-webkit-search-cancel-button, .input-reset::-webkit-search-results-button, .input-reset::-webkit-search-results-decoration {
+  display: none;
+}
+
+:root {
+  --black-color: #151515;
+  --light-color: #f1f1f1;
+  --bg: #222222;
+  --orange-color: #ff4c0d;
+  --gap: 30px;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  animation-name: accordion;
+  animation-duration: 3s;
+}
+
+.input-reset {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+}
+.input-reset::-webkit-search-decoration, .input-reset::-webkit-search-cancel-button, .input-reset::-webkit-search-results-button, .input-reset::-webkit-search-results-decoration {
+  display: none;
+}
+
+/* stylelint-disable */
+.reviews {
+  margin-bottom: 110px;
+  position: relative;
+}
+.reviews-ellipse {
+  position: absolute;
+  top: -320px;
+  right: -300px;
+  width: 950px;
+  height: 950px;
+  z-index: -10px;
+  background: linear-gradient(120.02deg, #fc501f 12.77%, rgba(252, 80, 31, 0) 59.51%);
+  opacity: 0.5;
+  filter: blur(140px);
+  transform: matrix(0, 1, 1, 0, 0, 0);
+}
+@media (max-width: 960px) {
+  .reviews {
+    margin-bottom: 90px;
+  }
+}
+@media (max-width: 480px) {
+  .reviews {
+    margin-bottom: 60px;
+  }
+}
+.reviews-wrapper {
+  padding: 0 var(--gap) !important;
+  max-width: 1611px;
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+.reviews_title {
+  margin: 0 0 30px 0;
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 110%;
+  color: var(--orange-color);
+}
+@media (max-width: 960px) {
+  .reviews_title {
+    font-size: 30px;
+    color: var(--light-color);
+  }
+}
+@media (max-width: 480px) {
+  .reviews_title {
+    font-size: 25px;
+  }
+}
+.reviews_btn {
+  margin-bottom: 10px;
+}
+.reviews_container {
+  margin-bottom: 30px;
+}
+.reviews_item {
+  background: var(--black-color);
+  border-radius: 15px;
+  max-width: 480px;
+  min-width: 410px;
+}
+@media (max-width: 480px) {
+  .reviews_item {
+    min-width: 250px;
+  }
+}
+.reviews_item-wrap {
+  margin: 40px;
+}
+.reviews_item-title {
+  font-size: 20px;
+  line-height: 120%;
+  margin: 0;
+  color: var(--light-color);
+}
+.reviews_item-line {
+  margin: 20px 0;
+  height: 3px;
+  border: 0;
+  background-color: var(--orange-color);
+  width: 100px;
+}
+.reviews_item-text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  color: var(--light-color);
+}
+.reviews_bottom {
+  padding: 0 !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  display: flex;
+  justify-content: space-between;
+}
+.reviews_toggle {
+  display: flex;
+}
+@media (max-width: 480px) {
+  .reviews_toggle {
+    display: none;
+  }
+}
+.reviews_toggle-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: #151515;
+  width: 7px;
+  height: 14px;
+}
+.reviews_toggle-next {
+  margin-left: 15px;
+}
+.reviews_toggle-next .reviews_toggle-icon {
+  transform: rotate(180deg) translate(50%, 50%);
+}
+.reviews_toggle-prev, .reviews_toggle-next {
+  position: relative;
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  background: #f1f1f1;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.reviews_toggle-prev:active, .reviews_toggle-next:active {
+  background: var(--orange-color);
+  transition: 0.4s;
+}
+.reviews_toggle-prev:active .reviews_toggle-icon, .reviews_toggle-next:active .reviews_toggle-icon {
+  fill: #f1f1f1;
+}
